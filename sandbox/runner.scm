@@ -1,6 +1,4 @@
- (define (pascal-triangle row col) 
-   (cond ((> col row) 0) 
-         ((< col 0) 0) 
-         ((= col 1) 1) 
-         ((+ (pascal-triangle (- row 1) (- col 1)) 
-             (pascal-triangle (- row 1) col))))) 
+(define (fib n) (fib-iter 1 0 n))
+(define (fib-iter a b count) (if (= count 0)
+      b
+      (fib-iter (+ a b) a (- count 1))))

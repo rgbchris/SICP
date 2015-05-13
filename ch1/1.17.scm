@@ -24,3 +24,11 @@
   (cond ((= b 0) 0)
         ((even? b) (double (* a (halve b))))
         (else (+ a (* a (- b 1))))))
+
+; (* 4 4)
+; (double (* 4 2))
+; (double (double (* 4 1))
+; (double (double (+ 4 (* 4 0))))
+; (double (double 4))
+; (double 8)
+; 16

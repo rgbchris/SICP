@@ -11,3 +11,11 @@
           ((even? b) (iter acc (double a) (halve b)))
           (else (iter (+ acc a) a (- b 1)))))
   (iter 0 a b))
+
+; (* 4 4)
+; (iter 0 4 4)
+; (iter 0 8 2)
+; (iter 0 16 1)
+; (iter (+ 0 16) 16 (- 1 1))
+; (iter 16 16 0)
+; => 16
