@@ -6,19 +6,18 @@
 ; performing this test.
 
 (define (timed-prime-test n)
-  (newline)
-  (display n)
   (start-prime-test n (runtime)))
 
 (define (start-prime-test n start-time)
   (if (prime? n)
-    (report-prime (- (runtime) start-time))
+    (report-prime (- (runtime) start-time) n)
     #f))
 
-(define (report-prime elapsed-time)
+(define (report-prime elapsed-time n)
+  (newline)
+  (display n)
   (display " *** ")
   (display elapsed-time))
-
 
 
 (define (smallest-divisor n)
